@@ -1,0 +1,143 @@
+* {
+    box-sizing:border-box;
+}
+
+body 
+{
+    display: flex;
+    width:100%;
+    height:100vh;
+    border:1px solid blue;
+    margin:0px;
+    background-image: radial-gradient(rgb(106, 144, 224) 23%,
+    rgb(73, 121, 224) 38% ,
+    rgb(30, 88, 214) 66%,
+    rgb(4, 71, 216) 100%);
+    color:white;
+    font-weight: 300;
+    font-family:open-sans,sans-serif;
+    font-size:22px;
+    justify-content: center;
+}
+
+.container
+{
+    width:80%;
+    height:100%;
+    padding:10px 0;
+   white-space: nowrap;
+}
+
+.weather-search
+{
+    width: 100%;
+    padding:10px 10px;
+    border:none;
+    background-color:rgba(255, 255, 255, 0.308);
+    font-size:20px;
+    color:inherit;
+}
+
+.weather-search::placeholder
+{color:white;}
+
+.weather-data
+{
+
+    display:flex;
+    justify-content: space-between;
+    padding:20px;
+    flex-wrap: wrap;
+}
+
+.city-data
+{
+    width:30vmin;
+   align-self: center;
+    
+}
+
+
+
+.clip-art img
+{
+    width:30vmin;
+    align-self:center;
+    
+}
+
+.city-name
+{
+    font-size:2rem;
+    font-weight: 600;
+}
+
+.city-data p {
+    font-size:1.4rem;
+    margin:10px;
+}
+
+.side-data::before
+{
+    content:'';
+    display:inline-block;
+    width:30px;
+    height: 30px;
+    vertical-align: middle;
+    background-size:cover;
+    padding:0px;
+} 
+
+.humid::before
+{
+    background-image: url(images/humidity.png);
+    margin-right:10px;
+}
+
+.wind::before
+{
+    background-image: url(images/wind.png);
+    margin-right:10px;
+}
+
+.pressure::before
+{
+    background-image: url(images/pressure.png);
+    margin-right:10px;
+}
+
+.temp-card
+{
+    font-size:3.5rem;
+    display:flex;
+    
+}
+
+.cards
+{
+    width:100%;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: center;
+    flex-wrap:wrap;  
+   
+
+}
+
+article
+{
+    background-color: rgba(245, 245, 245, 0.267);
+    border-radius:10px;
+    margin:20px 10px 10px 10px;
+    width:calc(20% - 20px);
+    max-width: 50%;
+    min-width:150px;
+    height:100%;
+}
+
+
+article img
+{
+    width:50%;
+}
