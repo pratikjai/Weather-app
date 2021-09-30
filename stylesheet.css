@@ -88,19 +88,19 @@ body
     padding:0px;
 } 
 
-.humid::before
+.side-data-humid::before
 {
     background-image: url(images/humidity.png);
     margin-right:10px;
 }
 
-.wind::before
+.side-data-wind::before
 {
     background-image: url(images/wind.png);
     margin-right:10px;
 }
 
-.pressure::before
+.side-data-pressure::before
 {
     background-image: url(images/pressure.png);
     margin-right:10px;
