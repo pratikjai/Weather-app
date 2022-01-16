@@ -132,12 +132,21 @@ article
     margin:20px 10px 10px 10px;
     width:calc(20% - 20px);
     min-width:150px;
-    height:100%;
+    height:20vh;
     flex-grow: 1; 
 }
 
 
-article img
-{
+
+
+
+#fImage{
     width:50%;
+    height:30%;
+    margin-top: 5px;
+}
+
+.weather-forecast-day
+{
+    font-size: 110%;
 }

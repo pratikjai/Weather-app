@@ -5,10 +5,33 @@ let humidityval = document.querySelector(".side-data-humid>.value")
 let wind = document.querySelector(".side-data-wind>.value")
 let pressure = document.querySelector(".side-data-pressure >.value")
 let tempbase = document.querySelector(".temp-value")
+let mainImg = document.querySelector('#mainImg')
 
 
 let five_day_day = document.querySelectorAll('.weather-forecast-day');
-let five_day_temp = document.querySelectorAll('.temp-value-sub')
+let five_day_temp = document.querySelectorAll('.temp-value-sub');
+let five_day_img = document.querySelectorAll('#fImage');
+let urlStorage = []; 
+
+
+let weatherImg = [{url:'images/clear-sky.png',
+                    id:[800]},
+                    {url:'images/broken-clouds.png',
+                    id:[803,804]},
+                    {url:'images/few-clouds.png',
+                    id:[801,802]} ,
+                    {url:'images/mist.png',
+                    id:[701,711,721,731,741,751,761,762,771,781]},
+                    {url:'images/rain.png',
+                    id:[500,501,502,503,504,511,520,521,522,531]},
+                    {url:'images/snow.png',
+                    id:[600,601,602,611,612,613,615,616,620,621,622]},
+                    {url:'images/thunderstorm.png',
+                    id:[200,201,202,210,211,212,221,230,231,232]}]
+
+
+
+
 
 let apikey = "0ad0b278b6e7ba8415632e440bca1bb9"
 
@@ -39,18 +62,23 @@ searchinp.addEventListener('keydown', async (e) => {
         let weatherdata = await searchresult(searchinp.value);
         let fiveDayData = await fiveData(searchinp.value);
         updatedata(weatherdata);
-        console.log(fiveDayData);
+    
         //Assigned list to new object
         let fiveDaylist = fiveDayData.list;
         //looping through fiveday array-object
-
+       
+       // console.log(fiveDaylist)
+        
         var fiveTemp = [];
         fiveDaylist.forEach(list => {
 
             let dateText = list.dt_txt
+            
 
-
-            if (dateText.includes('12:00:00') == true) { fiveTemp.push(list.main.temp) }
+            if (dateText.includes('12:00:00') == true) 
+            { fiveTemp.push(list.main.temp)
+                // fivedayImage(list);
+            }
         })
             for (let i = 0; i < 5; i++) {
 
@@ -64,6 +92,7 @@ searchinp.addEventListener('keydown', async (e) => {
 
     let updatedata = (data) => {
 
+    
         city.textContent = data.name + ',' + data.sys.country;
         day.textContent = dayofweek();
         humidityval.textContent = data.main.humidity;
