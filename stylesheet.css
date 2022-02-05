@@ -2,7 +2,7 @@
     box-sizing:border-box;
 }
 
-body 
+body
 {
     display: flex;
     width:100%;
@@ -54,7 +54,7 @@ body
 {
     width:30vmin;
    align-self: center;
-    
+
 }
 
 
@@ -63,7 +63,7 @@ body
 {
     width:30vmin;
     align-self:center;
-    
+
 }
 
 .city-name
@@ -86,7 +86,7 @@ body
     vertical-align: middle;
     background-size:cover;
     padding:0px;
-} 
+}
 
 .side-data-humid::before
 {
@@ -110,7 +110,7 @@ body
 {
     font-size:3.5rem;
     display:flex;
-    
+
 }
 
 .cards
@@ -120,8 +120,8 @@ body
     justify-content: space-between;
     text-align: center;
     flex-wrap:wrap;
-     
-   
+
+
 
 }
 
@@ -133,7 +133,7 @@ article
     width:calc(20% - 20px);
     min-width:150px;
     height:20vh;
-    flex-grow: 1; 
+    flex-grow: 1;
 }
 
 
